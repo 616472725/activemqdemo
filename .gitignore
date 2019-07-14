@@ -1,0 +1,34 @@
+*.pydevproject
+*.project
+*.metadata
+*.class
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.idea/
+.iml
+target/
+temp/
+logs/
+WEBSOCKET.txt
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+*/WEBSOCKET.txt
