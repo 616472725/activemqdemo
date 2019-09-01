@@ -8,7 +8,8 @@ import java.util.Random;
 
 public class producer_topic {
 
-    public static final String ACTIVE_BROKER_BIND_URL = "tcp://192.168.226.131:61616";
+//    public static final String ACTIVE_BROKER_BIND_URL = "tcp://192.168.226.131:61616";
+    public static final String ACTIVE_BROKER_BIND_URL = "nio://192.168.226.131:61608";
     public static final String QUEUE_NAME = "topic1";
 
     public static void main(String[] args) throws JMSException {
@@ -24,11 +25,13 @@ public class producer_topic {
         Topic topic = session.createTopic(QUEUE_NAME);
         //创建生产者
         MessageProducer producer = session.createProducer(topic);
+        producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
         for (int i = 0; i < 3; i++) {
 
             //创建消息
             Message message = new ActiveMQTextMessage();
+            message.setJMSDeliveryMode(DeliveryMode.PERSISTENT);
             ((ActiveMQTextMessage) message).setText("hello" + new Random(10).nextInt());
             //发送消息
             producer.send(message);

@@ -24,7 +24,7 @@ public class producer_topic_persist {
         Topic topic = session.createTopic(QUEUE_NAME);
         //创建生产者
         MessageProducer producer = session.createProducer(topic);
-//        producer.setDeliveryMode(DeliveryMode.PERSISTENT);
+        producer.setDeliveryMode(DeliveryMode.PERSISTENT);
         connection.start();
 
         for (int i = 0; i < 3; i++) {

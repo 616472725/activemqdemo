@@ -15,7 +15,7 @@ public class Consumer_Topic_Persist {
         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(ACTIVE_BROKER_BIND_URL);
         //创建连接
         Connection connection = factory.createConnection();
-        connection.setClientID("zh3");
+        connection.setClientID("li4");
 //        connection.start();
         //创建session
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);

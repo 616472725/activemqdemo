@@ -6,7 +6,8 @@ import javax.jms.*;
 import java.io.IOException;
 
 public class Consumer_Topic {
-    public static final String ACTIVE_BROKER_BIND_URL = "tcp://192.168.226.131:61616";
+//    public static final String ACTIVE_BROKER_BIND_URL = "tcp://192.168.226.131:61616";
+    public static final String ACTIVE_BROKER_BIND_URL = "nio://192.168.226.131:61608";
     public static final String QUEUE_NAME = "topic1";
 
     public static void main(String[] args) throws JMSException, IOException {

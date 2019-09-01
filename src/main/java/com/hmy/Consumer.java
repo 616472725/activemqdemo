@@ -7,7 +7,10 @@ import java.io.IOException;
 
 public class Consumer {
 //    public static final String ACTIVE_BROKER_BIND_URL = "tcp://192.168.226.131:61616";
-    public static final String ACTIVE_BROKER_BIND_URL = "tcp://localhost:61616";
+//    public static final String ACTIVE_BROKER_BIND_URL = "tcp://localhost:61616";
+//    public static final String ACTIVE_BROKER_BIND_URL = "nio://192.168.226.131:61618";
+//    public static final String ACTIVE_BROKER_BIND_URL = "nio://192.168.226.131:61608";
+    public static final String ACTIVE_BROKER_BIND_URL = "failover:(tcp://zk1:61616,tcp://zk2:61616,tcp://zk3:61616)";
     public static final String QUEUE_NAME = "queue1";
 
     public static void main(String[] args) throws JMSException, IOException {
